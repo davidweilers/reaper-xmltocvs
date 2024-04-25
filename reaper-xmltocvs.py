@@ -54,7 +54,7 @@ class MyFrame(wx.Frame):
 				_in = element.find('./timeRange/in').text.strip()
 				for content in element.findall('./comments/element'):
 					_displayName = content.find('./author/displayName').text.strip()
-					_content = '['+_displayName+'] '+content.find('./content').text.strip().replace('"','""')
+					_content = '['+_displayName+'] '+content.find('./content').text.strip().replace('"','""').replace(',','.')
 					
 					time = float(_in)
 					result = str(round(time,2))
