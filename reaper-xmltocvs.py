@@ -44,7 +44,7 @@ class MyFrame(wx.Frame):
 			print(pathname)
 
 			self.filename = fileDialog.GetFilename().lower()
-			self.filename = self.filename[0:self.filename.rindex('.')-1:]
+			self.filename = self.filename[0:self.filename.rindex('.'):]
 			print(self.filename)
 			
 			tree = el.parse(pathname)
